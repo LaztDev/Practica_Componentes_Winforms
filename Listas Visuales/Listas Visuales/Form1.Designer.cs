@@ -133,8 +133,10 @@
             textBoxNombre.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             textBoxNombre.Location = new Point(197, 39);
             textBoxNombre.Name = "textBoxNombre";
+            textBoxNombre.PlaceholderText = "Text";
             textBoxNombre.Size = new Size(188, 27);
             textBoxNombre.TabIndex = 1;
+            textBoxNombre.Tag = "";
             // 
             // tableLayoutPanel4
             // 
@@ -168,6 +170,7 @@
             textBoxPrecio.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             textBoxPrecio.Location = new Point(197, 39);
             textBoxPrecio.Name = "textBoxPrecio";
+            textBoxPrecio.PlaceholderText = "Decimales";
             textBoxPrecio.Size = new Size(188, 27);
             textBoxPrecio.TabIndex = 1;
             // 
@@ -203,6 +206,7 @@
             textBoxStock.Anchor = AnchorStyles.Left | AnchorStyles.Right;
             textBoxStock.Location = new Point(197, 39);
             textBoxStock.Name = "textBoxStock";
+            textBoxStock.PlaceholderText = "Enteros";
             textBoxStock.Size = new Size(188, 27);
             textBoxStock.TabIndex = 1;
             // 

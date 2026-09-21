@@ -19,7 +19,7 @@ public class Producto {
         get => _stock;
         set { 
             if (value < 0) {
-                throw new ArgumentException("el stock no puede ser negativo");
+                throw new ArgumentException("el stock debe ser un entero mayor o igual a cero");
             }
             _stock = value;
         }
@@ -28,7 +28,7 @@ public class Producto {
         get => _precio;
         set {
             if (value < 0) {
-                throw new ArgumentException("el precio no puede ser negativo");
+                throw new ArgumentException("el precio debe ser un entero mayor a cero");
             }
             _precio = value;
         }
