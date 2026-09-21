@@ -88,6 +88,7 @@
             Menu2.TabIndex = 1;
             Menu2.Text = "Menu2";
             Menu2.UseVisualStyleBackColor = true;
+            Menu2.Click += Menu2_Click;
             // 
             // Menu3
             // 
