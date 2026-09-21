@@ -27,14 +27,32 @@ namespace Listas_Visuales {
                 stock = int.Parse(stoc);
             }
             catch {
-                MessageBox.Show("Error al cargar los campos", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                MessageBox.Show("Error al cargar los campos", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);
                 return;
             }
             Producto produ = new Producto(nombre, precio, stock);
 
-            producto.Add(produ);
-
-
+            if (producto.Count() == 0) {
+                producto.Add(produ);
+                chekListBxProductos.Items.Add($"{produ.Nombre}  -   Precio: ${produ.Precio}  -  Stock: {produ.Stock}");
+                limpiarCampos();
+            }
+            else {
+                for (int i=0; i < producto.Count(); i++) {
+                    if (producto[i].Nombre == produ.Nombre) {
+                        MessageBox.Show("El producto ya existe", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    }
+                }
+                producto.Add(produ);
+                chekListBxProductos.Items.Add($"{produ.Nombre}  -   Precio: ${produ.Precio}  -  Stock: {produ.Stock}");
+                // metodod e actualizar
+                limpiarCampos();
+            }
+        }
+        private void limpiarCampos() {
+            textBoxNombre.Text = "";
+            textBoxPrecio.Text = "";
+            textBoxStock.Text = "";
         }
 
 

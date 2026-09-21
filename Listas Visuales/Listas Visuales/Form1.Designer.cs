@@ -37,7 +37,7 @@
             btnCargar = new Button();
             tableLayoutPanel6 = new TableLayoutPanel();
             button1 = new Button();
-            checkedListBox1 = new CheckedListBox();
+            chekListBxProductos = new CheckedListBox();
             tableLayoutPanel1.SuspendLayout();
             tableLayoutPanel2.SuspendLayout();
             tableLayoutPanel3.SuspendLayout();
@@ -223,7 +223,7 @@
             tableLayoutPanel6.ColumnCount = 1;
             tableLayoutPanel6.ColumnStyles.Add(new ColumnStyle(SizeType.Percent, 100F));
             tableLayoutPanel6.Controls.Add(button1, 0, 1);
-            tableLayoutPanel6.Controls.Add(checkedListBox1, 0, 0);
+            tableLayoutPanel6.Controls.Add(chekListBxProductos, 0, 0);
             tableLayoutPanel6.Location = new Point(403, 3);
             tableLayoutPanel6.Name = "tableLayoutPanel6";
             tableLayoutPanel6.RowCount = 2;
@@ -242,14 +242,14 @@
             button1.Text = "Eliminar Seleccion";
             button1.UseVisualStyleBackColor = true;
             // 
-            // checkedListBox1
+            // chekListBxProductos
             // 
-            checkedListBox1.Dock = DockStyle.Fill;
-            checkedListBox1.FormattingEnabled = true;
-            checkedListBox1.Location = new Point(3, 3);
-            checkedListBox1.Name = "checkedListBox1";
-            checkedListBox1.Size = new Size(388, 327);
-            checkedListBox1.TabIndex = 2;
+            chekListBxProductos.Dock = DockStyle.Fill;
+            chekListBxProductos.FormattingEnabled = true;
+            chekListBxProductos.Location = new Point(3, 3);
+            chekListBxProductos.Name = "chekListBxProductos";
+            chekListBxProductos.Size = new Size(388, 327);
+            chekListBxProductos.TabIndex = 2;
             // 
             // Form1
             // 
@@ -285,7 +285,7 @@
         private Label precioProd;
         private Label stockProd;
         private Button button1;
-        private CheckedListBox checkedListBox1;
+        private CheckedListBox chekListBxProductos;
         private TextBox textBoxNombre;
         private TextBox textBoxPrecio;
         private TextBox textBoxStock;
