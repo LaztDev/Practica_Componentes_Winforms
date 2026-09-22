@@ -40,6 +40,10 @@ public class Producto {
         Stock = stoc;
     }
 
+    public override string ToString() {
+        string text = $"{Nombre}  -   Precio: ${Precio}  -  Stock: {Stock}";
+        return text;
+    }
 
 
 }

@@ -36,7 +36,7 @@ namespace Listas_Visuales {
                     throw new ArgumentException("el precio debe ser un entero mayor o igual a cero"); //excepcion de argumento que tiramos al escucha del trycatch
                 }
             }
-            catch(Exception ex) { // catch (captura si el intento falla)   ex es la excepcion que tiramos
+            catch (Exception ex) { // catch (captura si el intento falla)   ex es la excepcion que tiramos
                 MessageBox.Show($"Error al cargar los campos \n({ex.Message})", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Error);//ex.messasge muestra el mensaje qeu tiramos en el try
                 return;
             }
@@ -52,7 +52,7 @@ namespace Listas_Visuales {
                 limpiarCampos(); // dejamos limpios los campos del formulario
             }
             else {
-                for (int i=0; i < producto.Count(); i++) { // recorremos la lista de productos y comparamos si el nuevo producto cargado ya existe 
+                for (int i = 0; i < producto.Count(); i++) { // recorremos la lista de productos y comparamos si el nuevo producto cargado ya existe 
                     if (producto[i].Nombre == produ.Nombre) {
                         MessageBox.Show("El producto ya existe", "Error", MessageBoxButtons.YesNo, MessageBoxIcon.Warning); //tira un mensaje de error si existe el producto
                     }
@@ -70,7 +70,16 @@ namespace Listas_Visuales {
             textBoxPrecio.Text = "";
             textBoxStock.Text = "";
         }
-
-
+        private void button1_Click(object sender, EventArgs e) {
+            foreach (string item in chekListBxProductos.CheckedItems) {
+                foreach (Producto produ in producto) { 
+                    if (produ.ToString() == item) {
+                        producto.Remove(produ);
+                        chekListBxProductos.Items.Remove(item);
+                        return;
+                    }
+                }
+            }
+        }
     }
 }
