@@ -71,12 +71,14 @@ namespace Listas_Visuales {
             textBoxStock.Text = "";
         }
         private void button1_Click(object sender, EventArgs e) {
-            foreach (string item in chekListBxProductos.CheckedItems) {
-                foreach (Producto produ in producto) { 
-                    if (produ.ToString() == item) {
-                        producto.Remove(produ);
-                        chekListBxProductos.Items.Remove(item);
-                        return;
+            foreach (string item in chekListBxProductos.CheckedItems) { // este foreach recorre los items tildados 
+                foreach (Producto produ in producto) { // este recorre la lista y compara con los items tildados
+                    if (produ.ToString() == item) {  //comparacion con el item del chek y la lsita
+                        // logica para eliminar de la lista y del check el producto tildado
+                        producto.Remove(produ); // remueve de la lsita
+                        chekListBxProductos.Items.Remove(item); // remueve del check el item 
+                        return; // sin este return se rompe el programa porque intentaria buscar los elementos siguientes 
+                        // el foreach recorre todos los elemetnos, con esto sale del bucle 
                     }
                 }
             }
